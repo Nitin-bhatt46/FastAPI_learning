@@ -1,0 +1,43 @@
+creating enironment
+p -3 -m venv venv
+
+selecting the interpretor 
+view -> command pallate -> which interpretor is activated check
+
+activating the environmnet
+
+ .\venv\Scripts\activate.
+
+ activate.extension
+ extension depend on which shell you are using
+
+bat -> cmd
+.ps1 -> powershell
+
+deactivate for deactivating the venv working venv.
+
+----------------------------------------------
+base -> conda
+PS -> powershell
+venv_name -> venv activate
+----------------------------------------------
+
+
+pip install fastapi[all]
+
+main.py
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/")
+async def root():
+    return{"message":"Hello ji FASTAPI kaam kr rha hai"}
+
+
+
+
+ to run :-> 
+uvicorn main:app --reload
